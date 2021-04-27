@@ -14,7 +14,7 @@ var integerDict = {
 function convertInteger(integerArr) {
 	resultArr = []
 	for (i = 0; i < integerArr.length; i++) {
-		num = integerArr[i].toString()
+		num = integerArr[i]
 		convertedNum = ""
 		for (j = 0; j < num.length; j++) {
 			convertedNum += integerDict[num[j]]
@@ -24,4 +24,5 @@ function convertInteger(integerArr) {
 	return resultArr
 }
 
-console.log(convertInteger([3, 25 , 209]))
+var arr = process.argv.slice(2)
+console.log(convertInteger(arr).toString())
